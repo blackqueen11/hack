@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HACKING...</title>
+  <style>
+    body {
+      background-color: black;
+      color: green;
+      font-family: monospace;
+      font-size: 20px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="screen"></div>
+
+  <script>
+    const messages = [
+      "Accessing target system...",
+      "Bypassing firewall...",
+      "Extracting data...",
+      "Uploading Trojan...",
+      "Formatting drive C:...",
+      "Sending data to Sibel...",
+      "HACK COMPLETE.",
+      "Wait a second...",
+      "This was just a prank 😎✨",
+      "You’ve been hacked by your favorite redhead hacker ❤️"
+    ];
+
+    let index = 0;
+    function showMessage() {
+      if (index < messages.length) {
+        document.getElementById("screen").innerHTML += messages[index] + "<br>";
+        index++;
+        setTimeout(showMessage, 1000);
+      }
+    }
+
+    showMessage();
+  </script>
+</body>
+</html>
