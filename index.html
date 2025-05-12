@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Remote Access Initiated</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      padding: 20px;
+    }
+    #msg {
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <div id="msg">Bağlantı kuruluyor...</div>
+
+  <script>
+    const lines = [
+      "Bağlantı başarıyla sağlandı.",
+      "Ekran görüntüsü alınıyor...",
+      "Görüntü sıkıştırılıyor...",
+      "Veri yükleniyor [██████████] %100",
+      "Veri Sibel'e gönderildi ✔",
+      "Sistem geçici olarak kilitlendi.",
+      "Lütfen bekleyin...",
+      "———————",
+      "🖤 Sibel buradaydı.",
+      "Senin ekranını değil, seni çözdüm.",
+      "Çünkü zaten içini okuyabiliyorum 😌",
+      "Kapatabilirsin, ama artık çok geç... 😈🎸"
+    ];
+
+    let i = 0;
+    const msgDiv = document.getElementById("msg");
+
+    function typeLine() {
+      if (i < lines.length) {
+        msgDiv.innerHTML += "\n" + lines[i];
+        i++;
+        setTimeout(typeLine, 1200);
+      }
+    }
+
+    setTimeout(typeLine, 1500);
+  </script>
+</body>
+</html>
